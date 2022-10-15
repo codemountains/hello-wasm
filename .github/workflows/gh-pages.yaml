@@ -24,6 +24,8 @@ jobs:
             # Runs a single command using the runners shell
             -   name: Run a one-line script
                 run: |
+                    chmod 755 ./gh-pages.sh
+                    chmod 755 ./build.sh
                     ./gh-pages.sh
                     echo completed
                 env:
