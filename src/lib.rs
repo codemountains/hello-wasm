@@ -1,6 +1,5 @@
 mod utils;
 
-use ulid::Ulid;
 use wasm_bindgen::prelude::*;
 use crate::utils::set_panic_hook;
 
@@ -11,7 +10,7 @@ use crate::utils::set_panic_hook;
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 #[wasm_bindgen]
-pub fn gen() -> String {
+pub fn greet() -> String {
     set_panic_hook();
-    Ulid::new().to_string()
+    "Hello, WASM!".to_string()
 }

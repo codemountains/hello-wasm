@@ -6,12 +6,11 @@
 
 extern crate wasm_bindgen_test;
 use wasm_bindgen_test::*;
-use ulid_wasm::gen;
+use ulid_wasm::greet;
 
 wasm_bindgen_test_configure!(run_in_browser);
 
 #[wasm_bindgen_test]
 fn pass() {
-    let id = gen();
-    assert_eq!(26, id.len());
+    assert_eq!("Hello, WASM!".to_string(), greet());
 }
